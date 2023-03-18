@@ -30,7 +30,7 @@ body {
 .card {
   padding: var(--spacing);
   background-color: var(--white);
-  max-width: 250px;
+  max-width: 303px;
   border-radius: var(--spacing);
   text-align: center;
   &-qr {
@@ -43,10 +43,11 @@ body {
     padding: calc(var(--spacing) - 5px);
     h3 {
       color: var(--darkblue);
+      font-size: calc(var(--fs) + 5px);
     }
     p {
       margin-top: var(--spacing);
-      font-size: calc(var(--fs) - 3px);
+      font-size: var(--fs);
       color: var(--grayishblue);
     }
   }
