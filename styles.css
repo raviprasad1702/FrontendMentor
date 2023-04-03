@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display&family=Lexend+Deca&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --fs: 15px;
+  --brightorange: hsl(31, 77%, 52%);
+  --darkcyan: hsl(184, 100%, 22%);
+  --verydarkcyan: hsl(179, 100%, 13%);
+  --fw400: 400;
+  --fw700: 700;
+  --br: 8px;
+}
+
+body {
+  font-size: var(--fs);
+  font-weight: var(--fw400);
+  font-family: "Lexend Deca", sans-serif;
+  display: grid;
+  place-items: center;
+  flex-direction: column;
+  height: calc(100vh - 30px);
+}
+
+.container {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .container {
+    padding: 0;
+    max-width: 1440px;
+    flex-direction: row;
+  }
+}
+.container .card {
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  justify-content: space-evenly;
+  padding: 30px;
+  color: #fff;
+}
+.container .card:nth-child(1) {
+  background-color: var(--brightorange);
+  border-top-right-radius: var(--br);
+  border-top-left-radius: var(--br);
+}
+.container .card:nth-child(1) .card-button {
+  color: var(--brightorange);
+}
+.container .card:nth-child(2) {
+  background-color: var(--darkcyan);
+}
+.container .card:nth-child(2) .card-button {
+  color: var(--darkcyan);
+}
+.container .card:nth-child(3) {
+  background-color: var(--verydarkcyan);
+  border-bottom-right-radius: var(--br);
+  border-bottom-left-radius: var(--br);
+}
+.container .card:nth-child(3) .card-button {
+  color: var(--verydarkcyan);
+}
+.container .card:nth-child(1) .card-button:hover, .container .card:nth-child(2) .card-button:hover, .container .card:nth-child(3) .card-button:hover {
+  background-color: transparent;
+  color: #fff;
+  border-color: #fff;
+}
+.container .card-title {
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "Big Shoulders Display", cursive;
+  font-size: calc(var(--fs) * 3);
+  font-weight: var(--fw700);
+}
+.container .card-desc {
+  line-height: 1.7;
+}
+.container .card-button {
+  background-color: #fff;
+  padding: 15px 20px;
+  border-radius: 60px;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+@media only screen and (min-width: 768px) {
+  .container .card {
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    justify-content: space-evenly;
+    padding: 50px;
+    color: #fff;
+  }
+  .container .card:nth-child(1) {
+    border-radius: 0;
+    border-bottom-left-radius: var(--br);
+    border-top-left-radius: var(--br);
+  }
+  .container .card:nth-child(3) {
+    border-radius: 0;
+    border-bottom-right-radius: var(--br);
+    border-top-right-radius: var(--br);
+  }
+}
